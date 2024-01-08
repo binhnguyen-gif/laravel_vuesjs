@@ -16,7 +16,20 @@ import { createApp } from 'vue';
 const app = createApp({});
 
 import ExampleComponent from './components/ExampleComponent.vue';
-app.component('example-component', ExampleComponent);
+import MyComponent from "./components/MyComponent.vue";
+import ReviewComponent from "./components/ReviewComponent.vue";
+import ComputedComponent from "./components/ComputedComponent.vue";
+import ConditionalComponent from "./components/ConditionalComponent.vue";
+import ListRendering from "./components/ListRendering.vue";
+import UserDashboard from "./components/UserDashboard.vue";
+// app.component('example-component', ExampleComponent);
+// app.component('my-component', MyComponent);
+// app.component('review-component', ReviewComponent);
+// app.component('computed-component', ComputedComponent);
+// app.component('conditional-component', ConditionalComponent);
+// app.component('list-rendering', ListRendering);
+app.component('user-dashboard', UserDashboard);
+
 
 /**
  * The following block of code may be used to automatically register your
