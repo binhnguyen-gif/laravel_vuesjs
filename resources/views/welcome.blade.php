@@ -6,7 +6,7 @@
 
     <title>Bean</title>
 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="antialiased">
 <div id="app">
@@ -17,8 +17,8 @@
 {{--    <conditional-component></conditional-component>--}}
 {{--    <list-rendering></list-rendering>--}}
     <user-dashboard></user-dashboard>
+{{--    <home></home>--}}
 </div>
 
-<script src="/js/app.js"></script>
 </body>
 </html>
