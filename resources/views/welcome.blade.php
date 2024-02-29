@@ -16,8 +16,11 @@
 {{--    <computed-component></computed-component>--}}
 {{--    <conditional-component></conditional-component>--}}
 {{--    <list-rendering></list-rendering>--}}
-    <user-dashboard></user-dashboard>
+{{--    <user-dashboard></user-dashboard>--}}
 {{--    <home></home>--}}
+{{--    <force-update></force-update>--}}
+{{--    <binding-html></binding-html>--}}
+{{--    <api-calling></api-calling>--}}
 </div>
 
 </body>

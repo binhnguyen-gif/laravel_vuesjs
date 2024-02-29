@@ -5,7 +5,7 @@
  */
 
 import './bootstrap';
-import { createApp } from 'vue';
+import {createApp} from 'vue';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -13,25 +13,32 @@ import { createApp } from 'vue';
  * to use in your application's views. An example is included for you.
  */
 
-const app = createApp({});
+
+const app = createApp({
+    data: () => {
+        return {
+            currentUserLogin: {},
+        };
+    },
+    created() {
+        this.getCurrentUserLogin();
+    },
+    methods: {
+        async getCurrentUserLogin() {
+            try {
+                const response = await axios.get("/getUserLogin");
+                this.currentUserLogin = response.data;
+            } catch (error) {
+                console.log(error);
+            }
+        },
+    },
+});
 
 import ExampleComponent from './components/ExampleComponent.vue';
-import MyComponent from "./components/MyComponent.vue";
-import ReviewComponent from "./components/ReviewComponent.vue";
-import ComputedComponent from "./components/ComputedComponent.vue";
-import ConditionalComponent from "./components/ConditionalComponent.vue";
-import ListRendering from "./components/ListRendering.vue";
-import UserDashboard from "./components/UserDashboard.vue";
-import HomeComponent from "./components/HomeComponent.vue";
+import ChatLayout from "./components/ChatLayout.vue";
 // app.component('example-component', ExampleComponent);
-// app.component('my-component', MyComponent);
-// app.component('review-component', ReviewComponent);
-// app.component('computed-component', ComputedComponent);
-// app.component('conditional-component', ConditionalComponent);
-// app.component('list-rendering', ListRendering);
-app.component('user-dashboard', UserDashboard);
-// app.component('home', HomeComponent);
-
+app.component('chat-layout', ChatLayout);
 
 /**
  * The following block of code may be used to automatically register your
